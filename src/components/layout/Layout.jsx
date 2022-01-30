@@ -1,17 +1,16 @@
 import React, { useEffect, useState } from "react";
-import { Container, Card, CardGroup, Row, Col } from "react-bootstrap";
+import { Container, Card, CardGroup, Row, Col, Spinner } from "react-bootstrap";
 
-import showe from "../images/showe.jpg";
-import spash from "../images/spash.jpg";
-import { LinkContainer } from "react-router-bootstrap";
 import Product from "../products/Product";
 import axios from "axios";
 
 function Layout() {
   const [productState, setProductState] = useState([]);
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     axios.get("http://localhost:3003/productData").then((response) => {
       setProductState(response.data);
+      setLoading(false);
     });
   });
   // useEffect(() => {
@@ -28,8 +27,15 @@ function Layout() {
     <div>
       <Container>
         <Row xs={1} md={3} className="g-4">
+          {loading && (
+            <Spinner
+              animation="border"
+              variant="dark"
+              style={{ textAlign: "center", fontSize: "30px" }}
+            />
+          )}
           {productState === [] ? (
-            <h1>Loading</h1>
+            <div></div>
           ) : (
             productState.map((item, image) => (
               <Col>

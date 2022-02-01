@@ -4,36 +4,42 @@
       "id": 0,
       "image": "https://images.pexels.com/photos/5704719/pexels-photo-5704719.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
       "product": "Beautiful",
+      "content": "lorem ipsum",
       "price": 80000
     },
     {
       "id": 1,
-      "image": "https://images.pexels.com/photos/5704719/pexels-photo-5704719.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "image": "https://images.pexels.com/photos/2529147/pexels-photo-2529147.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
       "product": "Beautiful",
+      "content": "lorem ipsum",
       "price": 80000
     },
     {
       "id": 2,
-      "image": "https://images.pexels.com/photos/5704719/pexels-photo-5704719.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "image": "https://images.pexels.com/photos/1464625/pexels-photo-1464625.jpeg?cs=srgb&dl=pexels-ray-piedra-1464625.jpg&fm=jpg",
       "product": "Beautiful",
+      "content": "lorem ipsum",
       "price": 80000
     },
     {
       "id": 3,
       "image": "https://images.pexels.com/photos/5704719/pexels-photo-5704719.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
       "product": "Beautiful",
+      "content": "lorem ipsum",
       "price": 80000
     },
     {
       "id": 4,
       "image": "https://images.pexels.com/photos/5704719/pexels-photo-5704719.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
       "product": "Beautiful",
+      "content": "lorem ipsum",
       "price": 80000
     },
     {
       "id": 5,
       "image": "https://images.pexels.com/photos/5704719/pexels-photo-5704719.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
       "product": "Beautiful",
+      "content": "lorem ipsum",
       "price": 80000
     }
   ]

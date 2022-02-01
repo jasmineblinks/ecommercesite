@@ -8,7 +8,7 @@ function Footer() {
         bg="dark"
         variant="dark"
         expand="lg"
-        style={{ marginTop: "50px" }}>
+        style={{ marginTop: "50px", height: "200px" }}>
         <Container bg="dark" variant="dark">
           <Nav>
             <Nav.Link href="#link">&copy; Cloudcommerce</Nav.Link>

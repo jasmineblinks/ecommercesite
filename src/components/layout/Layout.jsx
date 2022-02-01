@@ -59,6 +59,7 @@ function Layout() {
           )}
         </Row>
       </Container>
+
       {/* <Col>
                 <Card>
                   <Card.Img variant="top" src={showe} />

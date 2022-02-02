@@ -12,10 +12,11 @@ function App() {
       <Header />
       <Routes>
         <Route exact path="/" element={<Layout />}>
-          <Route exact path="/:productId" element={Product} />
-          {/* <Route path="new" element={<NewTeamForm />} />
-              <Route index element={<LeagueStandings />} /> */}
+          {" "}
         </Route>
+        <Route exact path="/:productId" element={<Product />} />
+        {/* <Route path="new" element={<NewTeamForm />} />
+              <Route index element={<LeagueStandings />} /> */}
       </Routes>
       <Footer />
     </BrowserRouter>

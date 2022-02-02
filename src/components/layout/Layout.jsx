@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Container, Card, CardGroup, Row, Col, Spinner } from "react-bootstrap";
 
-import Product from "../products/Product";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
 function Layout() {
-  const [productState, setProductState] = useState([]);
+  const [productState, setProductState] = useState(null);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     setTimeout(() => {
@@ -37,13 +36,13 @@ function Layout() {
               style={{ alignItem: "center", margin: "auto" }}
             />
           )}
-          {productState === [] ? (
+          {productState === null ? (
             <div></div>
           ) : (
             productState.map((item) => (
-              <Col>
-                <Card key={item.id}>
-                  <Link to={`/productId/${item.id}`}>
+              <Col key={item.id}>
+                <Card>
+                  <Link to={`/${item.id}`}>
                     <Card.Img variant="top" src={item.image} alt="shoe" />
                   </Link>
 

@@ -148,7 +148,7 @@ const Admin = () => {
 
           <div>
             {loading && <p>Loading...</p>}
-            {!imageSrc ? (
+            {videoSrc ? (
               <AdvancedVideo
                 // src={}
                 cldVid={cld

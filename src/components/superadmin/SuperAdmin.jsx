@@ -21,15 +21,15 @@ const SuperAdmin = () => {
         <section className={"banner-content"}>
           <div className={"banner-input"}>
             <div>
-              <label htmlFor="">Cloud Name:</label>
+              <label htmlFor="">Image/Video url:</label>
               <input type="text" name="cloudname" value="" />
 
-              <label htmlFor="">Upload Preset:</label>
+              <label htmlFor="">Con:</label>
               <input type="text" name="preset" value="" />
             </div>
 
             <div>
-              <label htmlFor="">width:</label>
+              <label htmlFor="">content:</label>
               <input type="text" value="" name="width" />
               <label htmlFor="">height:</label>
               <input type="text" value="" name="height" />

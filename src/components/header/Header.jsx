@@ -24,8 +24,8 @@ function Header() {
               <Nav.Link href="admin" style={{ color: "#fff!important" }}>
                 Admin
               </Nav.Link>
-              <Nav.Link href="#link" style={{ color: "#fff!important" }}>
-                Contact
+              <Nav.Link href="superadmin" style={{ color: "#fff!important" }}>
+                Super Admin
               </Nav.Link>
             </Nav>
 

@@ -48,8 +48,8 @@ function Layout() {
                       src={item.image}
                       alt="shoe"
                       style={{
-                        width: "415px",
-                        height: "350px",
+                        maxWidthidth: "415px",
+                        maxHeight: "350px",
                         objectFit: "cover",
                       }}
                     />

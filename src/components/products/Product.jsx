@@ -64,8 +64,9 @@ function Product() {
                   variant="top"
                   src={productState.image}
                   style={{
-                    width: "635px",
-                    height: "570px",
+                    maxWidth: "635px",
+
+                    maxHeight: "570px",
                     objectFit: "cover",
                   }}
                 />

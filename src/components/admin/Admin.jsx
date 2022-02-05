@@ -64,7 +64,8 @@ const Admin = () => {
       // .then((res) => console.log(res))
       .then((res) => {
         console.log(res);
-        setVideoSrc(res.public_id);
+        setVideoSrc(res.secure_url);
+        // setVideoSrc(res.public_id);
         setImageSrc(res.public_id);
         setTransformState((prev) => ({
           ...prev,
@@ -81,16 +82,6 @@ const Admin = () => {
     <div className={"header-banner"}>
       <div className={"banner-content-wrapper"}>
         <section className={"banner-content"}>
-          <h1 id={"title"}>Cloudinary video Editor</h1>
-          <p className={"about-me"}>
-            If you find it difficult uploading videos, worry no more. Using our
-            app you can easily upload, edit videos to cloudinary.
-            <br />
-            <span style={{ color: "red", fontWeight: "bold" }}> Note:</span>
-            Kindly input your cloud name and upload preset before uploading your
-            video.
-          </p>
-
           <div className={"banner-input"}>
             <div>
               <label htmlFor="">Cloud Name:</label>
@@ -130,7 +121,7 @@ const Admin = () => {
         </section>
         <div className={"user-img-wrapper"}>
           <div className={"upload-video"}>
-            <h1>Upload Your Videos Here</h1>
+            <h3 style={{ marginTop: "20px" }}>Upload To Cloudinary</h3>
             <div className={"upload"}>
               <input
                 type="file"
@@ -161,6 +152,7 @@ const Admin = () => {
                 controls
               />
             ) : (
+              // <div>{secure_url}</div>
               <AdvancedImage
                 cldImg={cld
                   .image(imageSrc)
@@ -171,6 +163,29 @@ const Admin = () => {
                   )}
               />
             )}
+            {/* {videoSrc ? (
+              <AdvancedVideo
+                // src={}
+                cldVid={cld
+                  .video(videoSrc)
+                  .resize(
+                    fill(transformState.fill)
+                      .width(transformState.width)
+                      .height(transformState.height)
+                  )}
+                controls
+              />
+            ) : (
+              <AdvancedImage
+                cldImg={cld
+                  .image(imageSrc)
+                  .resize(
+                    fill(transformState.fill)
+                      .width(transformState.width)
+                      .height(transformState.height)
+                  )}
+              />
+            )} */}
           </div>
 
           {/* <button onClick={() => myVideo}>Transform</button> */}

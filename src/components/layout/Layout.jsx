@@ -39,8 +39,8 @@ function Layout() {
           {productState === null ? (
             <div></div>
           ) : (
-            productState.map((item) => (
-              <Col key={item.id}>
+            productState.map((item,index) => (
+              <Col key={`${item.id}${index}`}>
                 <Card>
                   <Link to={`/${item.id}`}>
                     <Card.Img

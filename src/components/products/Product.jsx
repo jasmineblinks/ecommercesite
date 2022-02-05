@@ -58,17 +58,38 @@ function Product() {
           variant="dark"
           key={productState.productDetails}>
           <Row>
-            <Col sm={8}>
+            <Col sm={6}>
               <Card>
-                <Card.Img variant="top" src={productState.image} />
+                <Card.Img
+                  variant="top"
+                  src={productState.image}
+                  style={{
+                    width: "635px",
+                    height: "570px",
+                    objectFit: "cover",
+                  }}
+                />
               </Card>
             </Col>
-            <Col sm={4}>
-              <ListGroup>
-                <ListGroup.Item>{productState.product}</ListGroup.Item>
+            <Col sm={6}>
+              <ListGroup style={{ marginBottom: "20px" }}>
+                <ListGroup.Item
+                  style={{ fontSize: "25px", fontWeight: "bold" }}>
+                  {productState.title}
+                </ListGroup.Item>
+                <ListGroup.Item>{productState.content}</ListGroup.Item>
                 <ListGroup.Item>{productState.price}</ListGroup.Item>
               </ListGroup>
-              <Button variant="dark">Dark</Button>
+              <Button
+                variant="dark"
+                style={{
+                  display: "block",
+                  margin: "auto",
+                  width: "150px",
+                  textAlign: "center",
+                }}>
+                Add To Cart
+              </Button>
             </Col>
           </Row>
         </Container>

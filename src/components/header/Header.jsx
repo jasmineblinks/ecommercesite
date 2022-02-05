@@ -1,18 +1,43 @@
 import React from "react";
-import { Navbar, Container, Nav } from "react-bootstrap";
+import {
+  Navbar,
+  Container,
+  Nav,
+  Form,
+  FormControl,
+  Button,
+} from "react-bootstrap";
 
 function Header() {
   return (
     <div>
-      <Navbar bg="dark" variant="dark" expand="lg">
+      <Navbar
+        bg="dark"
+        variant="dark"
+        expand="lg"
+        style={{ marginBottom: "40px" }}>
         <Container>
-          <Navbar.Brand href="#home">Cloudcommerce</Navbar.Brand>
+          <Navbar.Brand href="/">Cloudcommerce</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse>
-            <Nav className="justify-content-end">
-              <Nav.Link href="admin">Admin</Nav.Link>
-              <Nav.Link href="#link">Contact</Nav.Link>
+          <Navbar.Collapse className="justify-content-end">
+            <Nav>
+              <Nav.Link href="admin" style={{ color: "#fff!important" }}>
+                Admin
+              </Nav.Link>
+              <Nav.Link href="#link" style={{ color: "#fff!important" }}>
+                Contact
+              </Nav.Link>
             </Nav>
+
+            <Form className="d-flex">
+              <FormControl
+                type="search"
+                placeholder="Search"
+                className="me-2"
+                aria-label="Search"
+              />
+              <Button variant="outline-light">Search</Button>
+            </Form>
           </Navbar.Collapse>
         </Container>
       </Navbar>

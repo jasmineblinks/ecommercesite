@@ -8,10 +8,16 @@ function Footer() {
         bg="dark"
         variant="dark"
         expand="lg"
-        style={{ marginTop: "50px", height: "200px" }}>
+        style={{ marginTop: "50px", height: "200px", marginLeft: "auto" }}>
         <Container bg="dark" variant="dark">
-          <Nav>
-            <Nav.Link href="#link">&copy; Cloudcommerce</Nav.Link>
+          <Nav className="justify-content-center">
+            <Nav.Link
+              href="#link"
+              style={{
+                fontSize: "25px",
+              }}>
+              &copy; Cloudcommerce
+            </Nav.Link>
           </Nav>
         </Container>
       </Navbar>

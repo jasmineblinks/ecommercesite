@@ -43,12 +43,22 @@ function Layout() {
               <Col key={item.id}>
                 <Card>
                   <Link to={`/${item.id}`}>
-                    <Card.Img variant="top" src={item.image} alt="shoe" />
+                    <Card.Img
+                      variant="top"
+                      src={item.image}
+                      alt="shoe"
+                      style={{
+                        width: "415px",
+                        height: "350px",
+                        objectFit: "cover",
+                      }}
+                    />
                   </Link>
 
                   <Card.Body>
                     <Card.Body>
-                      <Card.Title>{item.product}</Card.Title>
+                      <Card.Title>{item.title}</Card.Title>
+                      <Card.Text>{item.product}</Card.Text>
                       <Card.Text>{item.price}</Card.Text>
                     </Card.Body>
                   </Card.Body>

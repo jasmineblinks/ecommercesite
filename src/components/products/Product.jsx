@@ -20,19 +20,12 @@ function Product() {
   const { productId } = useParams();
 
   useEffect(() => {
-    setTimeout(() => {
-      axios.get("http://localhost:3003/productData").then((response) => {
-        const products = response.data;
-        const productDetails = products.filter(
-          (item) => item.id === +productId
-        );
-        // console.log(productDetails, products, productId);
-        setProductState(productDetails[0]);
-        // console.log(productDetails[0]);
+      axios.get(`http://localhost:3003/productData/${productId}`).then((response) => {
+        setProductState(response.data);  
         setLoading(false);
       });
-    }, 1000);
-  }, []);
+    
+  }, [productId, productState]);
   return (
     <div>
       {/* {loading && (

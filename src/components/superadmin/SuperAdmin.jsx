@@ -131,6 +131,7 @@ const SuperAdmin = () => {
                   height: "48px",
                   padding: "0px 12px",
                   display: "flex",
+                  textAlign: "center",
                 }}>
                 submit
               </button>

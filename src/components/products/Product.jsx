@@ -21,7 +21,7 @@ function Product() {
 
   useEffect(() => {
     axios
-      .get(`https://node-cloudcommerce.herokuapp.com/productData/${productId}`)
+      .get(`https://node-cloudcommerce.herokuapp.com/${productId}`)
       .then((response) => {
         setProductState(response.data);
         setLoading(false);

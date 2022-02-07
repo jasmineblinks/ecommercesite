@@ -52,7 +52,7 @@ const SuperAdmin = () => {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    fetch("https://node-cloudcommerce.herokuapp.com/productData", {
+    fetch("https://node-cloudcommerce.herokuapp.com/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

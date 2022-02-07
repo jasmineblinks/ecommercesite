@@ -20,12 +20,12 @@ function Product() {
   const { productId } = useParams();
 
   useEffect(() => {
-      axios.get(`http://localhost:3003/productData/${productId}`).then((response) => {
+      axios.get(`https://node-cloudcommerce.herokuapp.com/productData/${productId}`).then((response) => {
         setProductState(response.data);  
         setLoading(false);
       });
     
-  }, [productId, productState]);
+  }, [productId]);
   return (
     <div>
       {/* {loading && (

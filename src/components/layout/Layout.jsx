@@ -8,16 +8,16 @@ function Layout() {
   const [productState, setProductState] = useState(null);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    setTimeout(() => {
-      axios.get("http://localhost:3003/productData").then((response) => {
+    
+      axios.get("https://node-cloudcommerce.herokuapp.com/productData").then((response) => {
         setProductState(response.data);
         setLoading(false);
       });
-    }, 1000);
-  });
+    
+  },[]);
   // useEffect(() => {
   //   axios
-  //     .get("http://localhost:3003/productData")
+  //     .get("https://node-cloudcommerce.herokuapp.com/productData")
   //     .then((response) => {
   //       return response.json();
   //     })

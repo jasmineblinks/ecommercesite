@@ -125,16 +125,7 @@ const SuperAdmin = () => {
                 value={content}
                 onChange={({ target }) => setContent(target.value)}
               />
-              <button
-                type="submit"
-                style={{
-                  height: "48px",
-                  padding: "0px 12px",
-                  display: "flex",
-                  textAlign: "center",
-                }}>
-                submit
-              </button>
+              <button type="submit">submit</button>
             </div>
           </form>
         </section>

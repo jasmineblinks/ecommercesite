@@ -10,7 +10,7 @@ function Layout() {
   useEffect(() => {
     setTimeout(() => {
       axios
-        .get("https://node-cloudcommerce.herokuapp.com/")
+        .get("https://node-cloudcommerce.herokuapp.com/productData")
         .then((response) => {
           setProductState(response.data);
           setLoading(false);

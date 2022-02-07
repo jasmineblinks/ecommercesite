@@ -9,10 +9,12 @@ function Layout() {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     setTimeout(() => {
-      axios.get("http://localhost:3003/productData").then((response) => {
-        setProductState(response.data);
-        setLoading(false);
-      });
+      axios
+        .get("https://node-cloudcommerce.herokuapp.com/")
+        .then((response) => {
+          setProductState(response.data);
+          setLoading(false);
+        });
     }, 1000);
   });
   // useEffect(() => {
@@ -39,7 +41,7 @@ function Layout() {
           {productState === null ? (
             <div></div>
           ) : (
-            productState.map((item,index) => (
+            productState.map((item, index) => (
               <Col key={`${item.id}${index}`}>
                 <Card>
                   <Link to={`/${item.id}`}>

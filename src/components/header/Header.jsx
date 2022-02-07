@@ -22,7 +22,7 @@ function Header() {
           <Navbar.Collapse className="justify-content-end">
             <Nav>
               <Nav.Link href="admin" style={{ color: "#fff!important" }}>
-                Admin
+                About
               </Nav.Link>
               <Nav.Link href="superadmin" style={{ color: "#fff!important" }}>
                 Super Admin

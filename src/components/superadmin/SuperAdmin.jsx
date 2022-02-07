@@ -19,20 +19,20 @@ const SuperAdmin = () => {
   const [file, setFile] = useState("");
   const [image, setImage] = useState("");
   const [title, setTitle] = useState("");
-  const [product,setProduct] = useState("");
+  const [product, setProduct] = useState("");
   const [content, setContent] = useState("");
   const [price, setPrice] = useState("");
   const [isImageUploading, setIsImageUploading] = useState(false);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
-  const handleImageUpload =  (e) => {
+  const handleImageUpload = (e) => {
     const file = e.target.files[0];
     setIsImageUploading(true);
-    
+
     const formData = new FormData();
     formData.append("file", file);
     formData.append("upload_preset", "oqiie6dy");
-    
+
     fetch("https://api.cloudinary.com/v1_1/pueneh/image/upload", {
       method: "POST",
       body: formData,
@@ -41,15 +41,13 @@ const SuperAdmin = () => {
       .then((response) => response.json())
       .then((data) => {
         setIsImageUploading(false);
-        setFile("")
+        setFile("");
         setImage(data.secure_url);
       })
       .catch((error) => {
         setIsImageUploading(false);
-        console.log(error)
+        console.log(error);
       });
-    
-      
   };
 
   const handleFormSubmit = (e) => {
@@ -75,11 +73,10 @@ const SuperAdmin = () => {
         setProduct("");
         setContent("");
         setPrice("");
-        navigate("/")
+        navigate("/");
       })
       .catch((error) => console.log(error));
   };
-
 
   return (
     <div className={"header-banner"}>
@@ -88,20 +85,54 @@ const SuperAdmin = () => {
           <form className={"banner-input"} onSubmit={handleFormSubmit}>
             <div>
               <label htmlFor="">Image:</label>
-              {image ? <input type="text" value={image} /> : !isImageUploading ? <input type="file" accept="image/*" value={file} onChange={handleImageUpload} /> :<p>uploading...</p>}
+              {image ? (
+                <input type="text" value={image} />
+              ) : !isImageUploading ? (
+                <input
+                  type="file"
+                  accept="image/*"
+                  value={file}
+                  onChange={handleImageUpload}
+                />
+              ) : (
+                <p>uploading...</p>
+              )}
 
               <label htmlFor="">Title:</label>
-              <input type="text"  value={title} onChange={({target}) => setTitle(target.value)} />
+              <input
+                type="text"
+                value={title}
+                onChange={({ target }) => setTitle(target.value)}
+              />
               <label htmlFor="">Price:</label>
-              <input type="text" value={price} onChange={({target})=> setPrice(target.value)} />
+              <input
+                type="text"
+                value={price}
+                onChange={({ target }) => setPrice(target.value)}
+              />
             </div>
 
             <div>
               <label htmlFor="">Product:</label>
-              <input type="text" value={product} onChange={({target})=> setProduct(target.value)} />
+              <input
+                type="text"
+                value={product}
+                onChange={({ target }) => setProduct(target.value)}
+              />
               <label htmlFor="">Content:</label>
-              <input type="text" value={ content } onChange={ ({ target }) => setContent(target.value) } />
-              <button type="submit" style={{height:"48px",padding:"0px 12px",display:"flex"}}>
+              <input
+                type="text"
+                value={content}
+                onChange={({ target }) => setContent(target.value)}
+              />
+              <button
+                type="submit"
+                style={{
+                  height: "48px",
+                  padding: "0px 12px",
+                  display: "flex",
+                  textAlign: "center",
+                }}>
                 submit
               </button>
             </div>

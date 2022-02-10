@@ -8,13 +8,21 @@ function Layout() {
   const [productState, setProductState] = useState(null);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    
-      axios.get("https://node-cloudcommerce.herokuapp.com/productData").then((response) => {
+    axios
+      .get("https://node-cloudcommerce.herokuapp.com/productData")
+      .then((response) => {
         setProductState(response.data);
         setLoading(false);
       });
-    
-  },[]);
+  }, []);
+  //  useEffect(() => {
+  //    axios
+  //      .get("http://localhost:3003/productData")
+  //      .then((response) => {
+  //        setProductState(response.data);
+  //        setLoading(false);
+  //      });
+  //  }, []);
   // useEffect(() => {
   //   axios
   //     .get("https://node-cloudcommerce.herokuapp.com/productData")
@@ -43,16 +51,27 @@ function Layout() {
               <Col key={`${item.id}${index}`}>
                 <Card>
                   <Link to={`/${item.id}`}>
-                    <Card.Img
-                      variant="top"
-                      src={item.image}
-                      alt="shoe"
-                      style={{
-                        maxWidthidth: "415px",
-                        maxHeight: "350px",
-                        objectFit: "cover",
-                      }}
-                    />
+                    {item.image.includes("image") ? (
+                      <Card.Img
+                        variant="top"
+                        src={item.image}
+                        alt="shoe"
+                        style={{
+                          maxWidth: "415px",
+                          maxHeight: "350px",
+                          objectFit: "cover",
+                        }}
+                      />
+                    ) : (
+                      <div>
+                        <iframe
+                          width="353"
+                          height="350"
+                          src={item.image}
+                          frameborder="0"
+                          allowfullscreen></iframe>
+                      </div>
+                    )}
                   </Link>
 
                   <Card.Body>

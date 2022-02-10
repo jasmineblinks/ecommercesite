@@ -24,16 +24,26 @@ const SuperAdmin = () => {
   const [price, setPrice] = useState("");
   const [isImageUploading, setIsImageUploading] = useState(false);
   const navigate = useNavigate();
+  // const [uploadType, setUploadType] = useState(undefined)
 
   const handleImageUpload = (e) => {
     const file = e.target.files[0];
     setIsImageUploading(true);
+    // console.log({ ...e.target});
+    // console.log(e.target.files[0]);
+
+    // if (file.type.includes("image")) {
+    //   console.log("this is a image");
+    // } else {
+    //   console.log("This is a video");
+    // }
+    //
 
     const formData = new FormData();
     formData.append("file", file);
     formData.append("upload_preset", "oqiie6dy");
 
-    fetch("https://api.cloudinary.com/v1_1/pueneh/image/upload", {
+    fetch("https://api.cloudinary.com/v1_1/pueneh/upload", {
       method: "POST",
       body: formData,
     })
@@ -90,7 +100,7 @@ const SuperAdmin = () => {
               ) : !isImageUploading ? (
                 <input
                   type="file"
-                  accept="image/*"
+                  accept={["image/*", "video/*"]}
                   value={file}
                   onChange={handleImageUpload}
                 />

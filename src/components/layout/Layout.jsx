@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Container, Card, CardGroup, Row, Col, Spinner } from "react-bootstrap";
+import "./layout.css";
 
 import axios from "axios";
 import { Link } from "react-router-dom";
@@ -64,8 +65,9 @@ function Layout() {
                       />
                     ) : (
                       <video
-                        width="353"
-                        height="350"
+                        className="videoset"
+                        // width="353"
+                        // height="350"
                         controls
                         src={item.image}
                         type="video/mp4">

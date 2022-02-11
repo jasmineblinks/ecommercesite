@@ -21,9 +21,9 @@ function Header() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse className="justify-content-end">
             <Nav>
-              <Nav.Link href="admin" style={{ color: "#fff!important" }}>
+              {/* <Nav.Link href="admin" style={{ color: "#fff!important" }}>
                 About
-              </Nav.Link>
+              </Nav.Link> */}
               <Nav.Link href="superadmin" style={{ color: "#fff!important" }}>
                 Super Admin
               </Nav.Link>

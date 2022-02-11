@@ -20,11 +20,12 @@ function Product() {
   const { productId } = useParams();
 
   useEffect(() => {
-      axios.get(`https://node-cloudcommerce.herokuapp.com/productData/${productId}`).then((response) => {
-        setProductState(response.data);  
+    axios
+      .get(`https://node-cloudcommerce.herokuapp.com/productData/${productId}`)
+      .then((response) => {
+        setProductState(response.data);
         setLoading(false);
       });
-    
   }, [productId]);
   return (
     <div>
@@ -53,16 +54,27 @@ function Product() {
           <Row>
             <Col sm={6}>
               <Card>
-                <Card.Img
-                  variant="top"
-                  src={productState.image}
-                  style={{
-                    maxWidth: "635px",
+                {productState.image.includes("image") ? (
+                  <Card.Img
+                    variant="top"
+                    src={productState.image}
+                    style={{
+                      maxWidth: "635px",
 
-                    maxHeight: "570px",
-                    objectFit: "cover",
-                  }}
-                />
+                      maxHeight: "570px",
+                      objectFit: "cover",
+                    }}
+                  />
+                ) : (
+                  <div>
+                    <iframe
+                      width="543"
+                      height="570"
+                      src={productState.image}
+                      frameborder="0"
+                      allowfullscreen></iframe>
+                  </div>
+                )}
               </Card>
             </Col>
             <Col sm={6}>

@@ -63,14 +63,20 @@ function Layout() {
                         }}
                       />
                     ) : (
-                      <div>
-                        <iframe
-                          width="353"
-                          height="350"
-                          src={item.image}
-                          frameborder="0"
-                          allowfullscreen></iframe>
-                      </div>
+                      <video
+                        width="353"
+                        height="350"
+                        controls
+                        src={item.image}
+                        type="video/mp4">
+                        Your browser does not support HTML video.
+                      </video>
+                      // <iframe
+                      //   width="353"
+                      //   height="350"
+                      //   src={item.image}
+                      //   frameborder="0"
+                      //   allowfullscreen></iframe>
                     )}
                   </Link>
 

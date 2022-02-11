@@ -81,113 +81,33 @@ const Admin = () => {
   return (
     <div className={"header-banner"}>
       <div className={"banner-content-wrapper"}>
-        <section className={"banner-content"}>
-          <div className={"banner-input"}>
-            <div>
-              <label htmlFor="">Cloud Name:</label>
-              <input
-                onChange={handleCloudName}
-                type="text"
-                value={cldCloudName}
-                name="cloudname"
-              />
-
-              <label htmlFor="">Upload Preset:</label>
-              <input
-                onChange={handlePresetName}
-                type="text"
-                value={preset}
-                name="preset"
-              />
-            </div>
-
-            <div>
-              <label htmlFor="">width:</label>
-              <input
-                onChange={onChange}
-                type="text"
-                value={transformState.width}
-                name="width"
-              />
-              <label htmlFor="">height:</label>
-              <input
-                onChange={onChange}
-                type="text"
-                value={transformState.height}
-                name="height"
-              />
-            </div>
-          </div>
-        </section>
         <div className={"user-img-wrapper"}>
-          <div className={"upload-video"}>
-            <h3 style={{ marginTop: "20px" }}>Upload To Cloudinary</h3>
-            <div className={"upload"}>
-              <input
-                type="file"
-                name="file"
-                id=""
-                onChange={handleEventChange}
-              />
-              <button
-                onClick={handleSubmit}
-                disabled={(!cldCloudName, !preset)}>
-                Upload
-              </button>
-            </div>
-          </div>
-
-          <div>
-            {loading && <p>Loading...</p>}
-            {videoSrc ? (
-              <AdvancedVideo
-                // src={}
-                cldVid={cld
-                  .video(videoSrc)
-                  .resize(
-                    fill(transformState.fill)
-                      .width(transformState.width)
-                      .height(transformState.height)
-                  )}
-                controls
-              />
-            ) : (
-              // <div>{secure_url}</div>
-              <AdvancedImage
-                cldImg={cld
-                  .image(imageSrc)
-                  .resize(
-                    fill(transformState.fill)
-                      .width(transformState.width)
-                      .height(transformState.height)
-                  )}
-              />
-            )}
-            {/* {videoSrc ? (
-              <AdvancedVideo
-                // src={}
-                cldVid={cld
-                  .video(videoSrc)
-                  .resize(
-                    fill(transformState.fill)
-                      .width(transformState.width)
-                      .height(transformState.height)
-                  )}
-                controls
-              />
-            ) : (
-              <AdvancedImage
-                cldImg={cld
-                  .image(imageSrc)
-                  .resize(
-                    fill(transformState.fill)
-                      .width(transformState.width)
-                      .height(transformState.height)
-                  )}
-              />
-            )} */}
-          </div>
-
+          <h1>About us</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Odio ut
+            enim blandit volutpat maecenas volutpat. Viverra nibh cras pulvinar
+            mattis nunc sed blandit libero volutpat. Sed viverra tellus in hac.
+            Maecenas volutpat blandit aliquam etiam erat. At lectus urna duis
+            convallis. Semper risus in hendrerit gravida rutrum quisque non
+            tellus orci. Purus sit amet luctus venenatis lectus magna fringilla
+            urna porttitor. Ornare arcu odio ut sem. Eu turpis egestas pretium
+            aenean pharetra. Molestie ac feugiat sed lectus vestibulum mattis
+            ullamcorper velit. Ullamcorper eget nulla facilisi etiam dignissim
+            diam quis enim lobortis. Eget sit amet tellus cras adipiscing.
+            Suspendisse ultrices gravida dictum fusce ut. Enim facilisis gravida
+            neque convallis a cras semper. Integer quis auctor elit sed
+            vulputate mi sit amet. Posuere morbi leo urna molestie at elementum
+            eu. Lobortis elementum nibh tellus molestie nunc non blandit massa
+            enim. Proin sagittis nisl rhoncus mattis rhoncus. Amet risus nullam
+            eget felis. In mollis nunc sed id. Massa vitae tortor condimentum
+            lacinia quis vel. Ornare aenean euismod elementum nisi quis
+            eleifend. Proin nibh nisl condimentum id venenatis a condimentum
+            vitae. Nisi vitae suscipit tellus mauris a. Ac feugiat sed lectus
+            vestibulum. Donec pretium vulputate sapien nec sagittis. Ipsum dolor
+            sit amet consectetur adipiscing. In fermentum et sollicitudin ac.
+            {/* Eget dolor morbi non arcu risus quis varius quam quisque.  */}
+          </p>
           {/* <button onClick={() => myVideo}>Transform</button> */}
         </div>
       </div>

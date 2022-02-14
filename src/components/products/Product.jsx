@@ -13,6 +13,7 @@ import Footer from "../footer/footer";
 import spash from "../images/spash.jpg";
 import axios from "axios";
 import { useParams } from "react-router-dom";
+import "./product.css";
 
 function Product() {
   const [productState, setProductState] = useState(null);
@@ -68,6 +69,7 @@ function Product() {
                 ) : (
                   <div>
                     <iframe
+                      className="videosets"
                       width="543"
                       height="570"
                       src={productState.image}
